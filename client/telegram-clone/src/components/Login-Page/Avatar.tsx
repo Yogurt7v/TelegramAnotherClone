@@ -2,8 +2,8 @@ import Image from 'next/image';
 
 function Avatar() {
   return (
-    <div>
-      <div>
+    <div className="avatar cursor-pointer mx-auto mb-5 tooltip">
+      <div className=" rounded-full ">
         <Image
           src={'https://avatars.githubusercontent.com/u/97165289'}
           alt="Avatar"
