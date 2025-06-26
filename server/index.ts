@@ -10,5 +10,5 @@ const { PORT } = process.env || 4000;
 app.use(cors());
 
 app.listen(PORT, () => {
-  console.log(`Сервер запущен на http://localhost:${PORT}`);
+  console.log(`Backend server запущен на http://localhost:${PORT}`);
 });
