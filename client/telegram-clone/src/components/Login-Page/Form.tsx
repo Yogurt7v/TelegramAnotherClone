@@ -1,9 +1,14 @@
+'use client';
+import { useState } from 'react';
 import Avatar from './Avatar';
+import randomAvatar from '@/utils/random-number';
 
 function Form() {
+  const [avatarId, setAvatarId] = useState(randomAvatar);
+
   return (
     <form className="flex flex-col gap-5">
-      <Avatar />
+      <Avatar avatarId={avatarId} setAvatarId={setAvatarId} />
       <div className="flex flex-col xl:flex-row gap-5">
         <div className="form-control w-full">
           <label className="label">
