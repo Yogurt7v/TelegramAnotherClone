@@ -2,7 +2,21 @@ import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
   images: {
-    remotePatterns: [new URL('https://avatars.githubusercontent.com/u/*')],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'avatars.githubusercontent.com',
+        pathname: '/u/**',
+      },
+    ],
+  },
+  async rewrites() {
+    return [
+      {
+        source: '/',
+        destination: 'http://localhost:4000/:path',
+      },
+    ];
   },
 };
 
